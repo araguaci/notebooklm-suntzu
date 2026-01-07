@@ -18,16 +18,16 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
         components={{
           // Títulos
           h1: ({ node, ...props }) => (
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-12 first:mt-0 bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent border-b border-white/10 pb-4" {...props} />
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-12 first:mt-0 bg-gradient-to-r from-[#FF8000] to-cyan-400 bg-clip-text text-transparent border-b border-white/10 pb-4" {...props} />
           ),
           h2: ({ node, ...props }) => (
-            <h2 className="text-3xl md:text-4xl font-bold mb-5 mt-10 bg-gradient-to-r from-indigo-300 to-cyan-300 bg-clip-text text-transparent border-b border-white/10 pb-3" {...props} />
+            <h2 className="text-3xl md:text-4xl font-bold mb-5 mt-10 bg-gradient-to-r from-[#FF9933] to-cyan-300 bg-clip-text text-transparent border-b border-white/10 pb-3" {...props} />
           ),
           h3: ({ node, ...props }) => (
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 mt-8 text-indigo-300" {...props} />
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 mt-8 text-[#FF9933]" {...props} />
           ),
           h4: ({ node, ...props }) => (
-            <h4 className="text-xl md:text-2xl font-bold mb-3 mt-6 text-indigo-200" {...props} />
+            <h4 className="text-xl md:text-2xl font-bold mb-3 mt-6 text-[#FFB366]" {...props} />
           ),
           // Parágrafos
           p: ({ node, ...props }) => (
@@ -35,10 +35,10 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
           ),
           // Listas
           ul: ({ node, ...props }) => (
-            <ul className="list-disc list-inside mb-6 space-y-2 text-gray-300 marker:text-indigo-400" {...props} />
+            <ul className="list-disc list-inside mb-6 space-y-2 text-gray-300 marker:text-[#FF8000]" {...props} />
           ),
           ol: ({ node, ...props }) => (
-            <ol className="list-decimal list-inside mb-6 space-y-2 text-gray-300 marker:text-indigo-400" {...props} />
+            <ol className="list-decimal list-inside mb-6 space-y-2 text-gray-300 marker:text-[#FF8000]" {...props} />
           ),
           li: ({ node, ...props }) => (
             <li className="ml-4 mb-2 text-base md:text-lg leading-relaxed" {...props} />
@@ -46,7 +46,7 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
           // Links
           a: ({ node, ...props }) => (
             <a
-              className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors"
+              className="text-[#FF8000] hover:text-[#FF9933] underline underline-offset-2 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               {...props}
@@ -55,7 +55,7 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
           // Citações
           blockquote: ({ node, ...props }) => (
             <blockquote
-              className="border-l-4 border-indigo-500/50 pl-6 py-2 my-6 italic text-gray-400 bg-white/5 rounded-r-lg"
+              className="border-l-4 border-[#FF8000]/50 pl-6 py-2 my-6 italic text-gray-400 bg-white/5 rounded-r-lg"
               {...props}
             />
           ),
@@ -64,7 +64,7 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
             if (inline) {
               return (
                 <code
-                  className="px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded text-sm font-mono border border-indigo-500/30"
+                  className="px-2 py-1 bg-[#FF8000]/20 text-[#FF9933] rounded text-sm font-mono border border-[#FF8000]/30"
                   {...props}
                 />
               );
@@ -87,7 +87,7 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
             </div>
           ),
           thead: ({ node, ...props }) => (
-            <thead className="bg-indigo-500/10" {...props} />
+            <thead className="bg-[#FF8000]/10" {...props} />
           ),
           tbody: ({ node, ...props }) => (
             <tbody className="divide-y divide-white/10" {...props} />
@@ -96,7 +96,7 @@ export default function MarkdownViewer({ content }: MarkdownViewerProps) {
             <tr className="hover:bg-white/5 transition-colors" {...props} />
           ),
           th: ({ node, ...props }) => (
-            <th className="px-6 py-3 text-left text-xs font-bold text-indigo-300 uppercase tracking-wider" {...props} />
+            <th className="px-6 py-3 text-left text-xs font-bold text-[#FF9933] uppercase tracking-wider" {...props} />
           ),
           td: ({ node, ...props }) => (
             <td className="px-6 py-4 text-sm text-gray-300" {...props} />

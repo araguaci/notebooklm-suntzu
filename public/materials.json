@@ -1,5 +1,113 @@
 {
-  "materials": [],
+  "materials": [
+    {
+      "id": "sun-tzu-estrategia-atemporal",
+      "title": "Sun Tzu: A Estratégia Atemporal",
+      "description": "Documento PDF sobre os princípios estratégicos de Sun Tzu e sua aplicação nos dias atuais.",
+      "type": "document",
+      "file": "sun_tzu_a_estrategia_atemporal.pdf",
+      "category": "documentos",
+      "tags": ["Sun Tzu", "Estratégia", "PDF", "Arte da Guerra"]
+    },
+    {
+      "id": "sabedoria-estrategica-teoria-jogos",
+      "title": "Sabedoria Estratégica de Sun Tzu: A Teoria dos Jogos",
+      "description": "Documento PDF explorando a conexão entre os princípios estratégicos de Sun Tzu e a Teoria dos Jogos moderna, analisando como a sabedoria milenar se alinha com a análise matemática contemporânea.",
+      "type": "document",
+      "file": "sabedoria_estrategica_de_sun_tzu_a_teoria_dos_jogos.pdf",
+      "category": "documentos",
+      "tags": ["Sun Tzu", "Teoria dos Jogos", "PDF", "Estratégia", "Análise Matemática"]
+    },
+    {
+      "id": "lideranca-estrategica-sun-tzu-teoria-jogos",
+      "title": "Liderança Estratégica: Sun Tzu e a Teoria dos Jogos",
+      "description": "Documento PDF sobre liderança estratégica, integrando os ensinamentos de Sun Tzu com a Teoria dos Jogos para oferecer insights sobre tomada de decisão e gestão de conflitos.",
+      "type": "document",
+      "file": "lideranca-estrategica-sun-tzu-e-teoria-dos-jogos.pdf",
+      "category": "documentos",
+      "tags": ["Sun Tzu", "Liderança", "Teoria dos Jogos", "PDF", "Estratégia", "Tomada de Decisão"]
+    },
+    {
+      "id": "do-campo-de-batalha-a-sala-de-reunioes",
+      "title": "Do Campo de Batalha à Sala de Reuniões",
+      "description": "Uma análise estratégica de Sun Tzu e Clausewitz para o Século XXI. Compara as filosofias dos dois mestres da guerra e demonstra como suas visões se complementam na estratégia moderna.",
+      "type": "document",
+      "file": "do-campo-de-batalha-a-sala-de-reunioes.md",
+      "category": "documentos",
+      "tags": ["Sun Tzu", "Clausewitz", "Estratégia", "Guerra", "Liderança", "Análise Comparativa"]
+    },
+    {
+      "id": "sun-tzu-teoria-dos-jogos",
+      "title": "Sun Tzu e a Teoria dos Jogos",
+      "description": "Uma análise comparativa de estratégias milenares e modernas. Explora o encontro entre a sabedoria ancestral de Sun Tzu e a análise matemática da Teoria dos Jogos, mostrando como ambos decifram a lógica fundamental do conflito e da cooperação.",
+      "type": "document",
+      "file": "sun-tzu-e-a-teoria-dos-jogos.md",
+      "category": "documentos",
+      "tags": ["Sun Tzu", "Teoria dos Jogos", "Estratégia", "Análise Comparativa", "Matemática", "Filosofia"]
+    },
+    {
+      "id": "eterna-estrategia-legado-moderno",
+      "title": "A Eterna Estratégia: O Legado Moderno de Sun Tzu",
+      "description": "Explora como os ensinamentos de Sun Tzu, originados na era das flechas e espadas, permanecem vitais na estratégia moderna, aplicando-se a negócios, cibersegurança, geopolítica e teoria dos jogos.",
+      "type": "document",
+      "file": "a-eterna-estrategia-o-legado-moderno-de-sun-tzu.md",
+      "category": "documentos",
+      "tags": ["Sun Tzu", "Legado Moderno", "Estratégia", "Aplicação Contemporânea", "Grande Estratégia"]
+    },
+    {
+      "id": "a-arte-da-guerra-sun-tzu-video",
+      "title": "A Arte da Guerra de Sun Tzu",
+      "description": "Vídeo sobre os ensinamentos e princípios estratégicos de Sun Tzu apresentados em A Arte da Guerra.",
+      "type": "video",
+      "file": "a_arte_da_guerra_de_sun_tzu.mp4",
+      "category": "videos",
+      "tags": ["Sun Tzu", "Vídeo", "Arte da Guerra", "Estratégia"]
+    },
+    {
+      "id": "sun-tzu-vs-clausewitz-audio",
+      "title": "Sun Tzu vs Clausewitz: Eram Opostos?",
+      "description": "Áudio discutindo as diferenças e semelhanças entre as filosofias estratégicas de Sun Tzu e Clausewitz.",
+      "type": "audio",
+      "file": "sun_tzu_vs_clausewitz_eram_opostos_a_arte_da_guerra.m4a",
+      "category": "audios",
+      "tags": ["Sun Tzu", "Clausewitz", "Áudio", "Comparação", "Estratégia"]
+    },
+    {
+      "id": "mind-map",
+      "title": "Mapa Mental",
+      "description": "Mapa mental visualizando conceitos e conexões relacionadas à estratégia e aos ensinamentos de Sun Tzu.",
+      "type": "image",
+      "file": "mind-map.png",
+      "category": "imagens",
+      "tags": ["Mapa Mental", "Visualização", "Estratégia", "Sun Tzu"]
+    },
+    {
+      "id": "arte-da-guerra-moderna",
+      "title": "A Arte da Guerra Moderna",
+      "description": "Imagem ilustrativa sobre a aplicação dos princípios de Sun Tzu no contexto moderno.",
+      "type": "image",
+      "file": "a-arte-da-guerra-moderna.png",
+      "category": "imagens",
+      "tags": ["Sun Tzu", "Arte da Guerra", "Moderno", "Ilustração"]
+    },
+    {
+      "id": "arte-da-guerra-moderna-mundo-moderno",
+      "title": "A Arte da Guerra Moderna no Mundo Moderno",
+      "description": "Visualização sobre como os princípios milenares de Sun Tzu se aplicam ao mundo contemporâneo.",
+      "type": "image",
+      "file": "a-arte-da-guerra-moderna-no-mundo-moderno.png",
+      "category": "imagens",
+      "tags": ["Sun Tzu", "Mundo Moderno", "Aplicação Contemporânea", "Estratégia"]
+    },
+    {
+      "id": "sabedoria-sun-tzu-estrategia-moderna",
+      "title": "Sabedoria de Sun Tzu: Estratégia Moderna",
+      "description": "Imagem representando a sabedoria atemporal de Sun Tzu e sua relevância para a estratégia moderna.",
+      "type": "image",
+      "file": "sabedoria-de-sun-tzu-estrategia-moderna.png",
+      "category": "imagens",
+      "tags": ["Sun Tzu", "Sabedoria", "Estratégia Moderna", "Atemporal"]
+    }
+  ],
   "notebooks": []
 }
-
