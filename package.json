@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "add-material": "node scripts/adicionar-material.js"
+    "add-material": "node scripts/adicionar-material.js",
+    "gerar-icones": "node scripts/gerar-icones.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

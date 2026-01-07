@@ -1,0 +1,28 @@
+{
+  "name": "Sun Tzu: A Arte da Guerra na Modernidade e Teoria",
+  "short_name": "Sun Tzu",
+  "description": "Explore o legado de Sun Tzu e sua obra A Arte da Guerra, analisando sua aplicação em contextos contemporâneos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#FF8000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "books", "reference"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}
+

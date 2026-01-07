@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 import {
   FileText, Video, Music, Image as ImageIcon,
-  Download, ExternalLink, BookOpen, FileCheck, Link as LinkIcon
+  Download, ExternalLink, BookOpen, FileCheck, Link as LinkIcon,
+  Share2, Facebook, Twitter, Linkedin, MessageCircle
 } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -478,7 +479,142 @@ const MediaPreview = () => {
   );
 };
 
-// 5. FOOTER
+// 5. SHARE SECTION
+const ShareSection = () => {
+  const [copied, setCopied] = useState(false);
+  const shareUrl = "https://suntzu-chi.vercel.app/";
+  const shareTitle = "⚔️ Sun Tzu: A Arte da Guerra na Modernidade e Teoria";
+  const shareText = "Explore o legado de Sun Tzu e sua obra A Arte da Guerra, analisando sua aplicação em contextos contemporâneos.";
+
+  const handleShare = async (platform: string) => {
+    const encodedUrl = encodeURIComponent(shareUrl);
+    const encodedTitle = encodeURIComponent(shareTitle);
+    const encodedText = encodeURIComponent(shareText);
+
+    let shareLink = "";
+
+    switch (platform) {
+      case "facebook":
+        shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+        break;
+      case "twitter":
+        shareLink = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
+        break;
+      case "linkedin":
+        shareLink = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        break;
+      case "whatsapp":
+        shareLink = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
+        break;
+      default:
+        return;
+    }
+
+    window.open(shareLink, "_blank", "width=600,height=400");
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Erro ao copiar link:", err);
+    }
+  };
+
+  const handleNativeShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+      } catch (err) {
+        // Usuário cancelou ou erro
+      }
+    }
+  };
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      <div className="rounded-3xl bg-gradient-to-br from-[#FF8000]/10 via-[#FF8000]/5 to-purple-500/10 border border-[#FF8000]/30 p-8 md:p-12">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#FF8000]/20 mb-4">
+            <Share2 size={32} className="text-[#FF8000]" />
+          </div>
+          <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#FF8000] to-cyan-400 bg-clip-text text-transparent mb-2">
+            Compartilhe este Conteúdo
+          </h3>
+          <p className="text-gray-400 text-sm md:text-base">
+            Ajude a espalhar o conhecimento sobre Sun Tzu e A Arte da Guerra
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <button
+            onClick={() => handleShare("facebook")}
+            className="flex items-center gap-2 px-6 py-3 bg-[#1877F2]/20 hover:bg-[#1877F2]/30 text-white rounded-lg transition-colors border border-[#1877F2]/30"
+          >
+            <Facebook size={20} />
+            <span>Facebook</span>
+          </button>
+
+          <button
+            onClick={() => handleShare("twitter")}
+            className="flex items-center gap-2 px-6 py-3 bg-[#1DA1F2]/20 hover:bg-[#1DA1F2]/30 text-white rounded-lg transition-colors border border-[#1DA1F2]/30"
+          >
+            <Twitter size={20} />
+            <span>Twitter</span>
+          </button>
+
+          <button
+            onClick={() => handleShare("linkedin")}
+            className="flex items-center gap-2 px-6 py-3 bg-[#0077B5]/20 hover:bg-[#0077B5]/30 text-white rounded-lg transition-colors border border-[#0077B5]/30"
+          >
+            <Linkedin size={20} />
+            <span>LinkedIn</span>
+          </button>
+
+          <button
+            onClick={() => handleShare("whatsapp")}
+            className="flex items-center gap-2 px-6 py-3 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-white rounded-lg transition-colors border border-[#25D366]/30"
+          >
+            <MessageCircle size={20} />
+            <span>WhatsApp</span>
+          </button>
+
+          {typeof navigator !== "undefined" && navigator.share && (
+            <button
+              onClick={handleNativeShare}
+              className="flex items-center gap-2 px-6 py-3 bg-[#FF8000]/20 hover:bg-[#FF8000]/30 text-[#FF8000] rounded-lg transition-colors border border-[#FF8000]/30"
+            >
+              <Share2 size={20} />
+              <span>Compartilhar</span>
+            </button>
+          )}
+
+          <button
+            onClick={handleCopyLink}
+            className="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg transition-colors border border-white/10"
+          >
+            <LinkIcon size={20} />
+            <span>{copied ? "Copiado!" : "Copiar Link"}</span>
+          </button>
+        </div>
+
+        <div className="text-center">
+          <p className="text-gray-500 text-xs">
+            URL: <span className="text-gray-400 font-mono">{shareUrl}</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// 6. FOOTER
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -491,6 +627,41 @@ const Footer = () => {
         <p className="text-gray-400 mb-6 text-sm">
           Organize e compartilhe seus estudos do NotebookLM
         </p>
+
+        <div className="space-y-3 mb-6">
+          <p className="text-gray-500 text-xs">
+            Template baseado em{" "}
+            <a
+              href="https://github.com/araguaci/notebooklm-showcase"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF8000] hover:text-[#FF9933] underline transition-colors"
+            >
+              notebooklm-showcase
+            </a>
+          </p>
+          <p className="text-gray-500 text-xs">
+            Desenvolvido por{" "}
+            <a
+              href="https://github.com/araguaci"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF8000] hover:text-[#FF9933] underline transition-colors"
+            >
+              @araguaci
+            </a>
+            {" "}by{" "}
+            <a
+              href="https://artesdosul.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF8000] hover:text-[#FF9933] underline transition-colors"
+            >
+              @artesdosul
+            </a>
+          </p>
+        </div>
+
         <p className="text-gray-500 text-xs">
           © {currentYear} - Template open source para a comunidade
         </p>
@@ -514,6 +685,7 @@ export default function Page() {
         <HighlightsSection />
         <MaterialsSection />
         <MediaPreview />
+        <ShareSection />
         <Footer />
       </div>
     </div>
